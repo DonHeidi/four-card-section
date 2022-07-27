@@ -1,0 +1,37 @@
+@import '../../styles/colors.css';
+@import '../../styles/fonts.css';
+
+.heading {
+    color: var(--clr-neutral-very-dark-blue);
+    text-align: center;
+    margin-top: 85px;
+    margin-inline: 2rem;
+    margin-bottom: 4.75rem;
+    line-height: 2.25rem;   
+}
+
+.upperTagline {
+    font-size: 1.5rem;
+    font-weight: var(--fw-light);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: 13px;
+}
+
+.lowerTagline {
+    font-size: 15px;
+    line-height: 25px;
+    max-width: 540px;
+    margin: auto;
+}
+
+@media screen and (min-width: 376px) {
+    .heading {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+    }
+    
+}

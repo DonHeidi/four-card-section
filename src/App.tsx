@@ -1,10 +1,9 @@
-import "./App.css";
 import Card from "./components/Card";
 import Heading from "./components/Heading";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header>
         <Heading
           upperTagline="Reliable, efficient delivery"
@@ -49,7 +48,7 @@ function App() {
           }}
         />
       </main>
-    </div>
+    </>
   );
 }
 
