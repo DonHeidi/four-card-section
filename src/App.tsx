@@ -1,9 +1,17 @@
 import "./App.css";
 import Card from "./components/Card";
+import Heading from "./components/Heading";
 
 function App() {
   return (
     <div className="App">
+      <header>
+        <Heading
+          upperTagline="Reliable, efficient delivery"
+          title="Powered by Technology"
+          lowerTagline="Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful"
+        />
+      </header>
       <main>
         <Card
           title="Supervisor"
