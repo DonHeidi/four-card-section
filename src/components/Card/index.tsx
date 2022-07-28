@@ -12,8 +12,8 @@ type CardProps = {
 
 const Card: FunctionComponent<CardProps> = ({ title, copy, icon }) => {
   return (
-    <div className={styles.card}>
-      <h2>{title}</h2>
+    <div className={styles.container}>
+      <h2 className={styles.title}>{title}</h2>
       <p>{copy}</p>
       <img src={icon.url} alt={icon.alt} />
     </div>

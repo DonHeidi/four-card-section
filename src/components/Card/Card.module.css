@@ -1,8 +1,30 @@
-.card {
-   
+@import '../../styles/colors.css';
+@import '../../styles/fonts.css';
+
+.container {
+   width: 311px;
+   background-color: white;
+   box-shadow: 0px 15px 30px -11px hsla(213, 47%, 67%, .5) ;
+   padding: 1.75rem;
+   border-radius: 0.5rem;
+   border-top: 3.55px solid var(--clr-primary-blue);
+}
+
+.container:first-child {
+    border-color: var(--clr-primary-cyan);
+}
+
+.container:nth-child(2) {
+    border-top: 3.55px solid var(--clr-primary-red);
+}
+
+.container:nth-child(3) {
+    border-top: 3.55px solid var(--clr-primary-orange);
 }
 
 .title {
+    font-size: var(--fw-bold);
+    font-size: 1.25rem;
 
 }
 
