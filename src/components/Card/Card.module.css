@@ -8,12 +8,13 @@
 
 .container {
     position: relative;
-    min-width: 310px;
-   background-color: white;
-   box-shadow: 0px 15px 30px -11px hsla(213, 47%, 67%, .5) ;
-   padding: 1.75rem;
-   border-radius: 0.5rem;
-   border-top: 4px solid var(--clr-primary-blue);
+    min-width: 311px;
+    min-height: 222px;
+    background-color: white;
+    box-shadow: 0px 15px 30px -11px hsla(213, 47%, 67%, .5) ;
+    padding: 1.75rem;
+    border-radius: 0.5rem;
+    border-top: 4px solid var(--clr-primary-blue);
 }
 
 .container:first-child {
