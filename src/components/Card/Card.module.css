@@ -1,13 +1,19 @@
 @import '../../styles/colors.css';
 @import '../../styles/fonts.css';
 
+:root {
+    --padding-sm: 28px;
+    --padding-lg: 32px;
+}
+
 .container {
-   width: 311px;
+    position: relative;
+    min-width: 310px;
    background-color: white;
    box-shadow: 0px 15px 30px -11px hsla(213, 47%, 67%, .5) ;
    padding: 1.75rem;
    border-radius: 0.5rem;
-   border-top: 3.55px solid var(--clr-primary-blue);
+   border-top: 4px solid var(--clr-primary-blue);
 }
 
 .container:first-child {
@@ -15,16 +21,48 @@
 }
 
 .container:nth-child(2) {
-    border-top: 3.55px solid var(--clr-primary-red);
+    border-color: var(--clr-primary-red);
 }
 
 .container:nth-child(3) {
-    border-top: 3.55px solid var(--clr-primary-orange);
+    border-color: var(--clr-primary-orange);
 }
 
 .title {
-    font-size: var(--fw-bold);
+    font-weight: var(--fw-bold);
     font-size: 1.25rem;
-
+    color: var(--clr-neutral-very-dark-blue)
 }
 
+.copy {
+    font-size: 13px;
+    font-weight: var(--fw-regular);
+    max-width: 250px;
+    color: var(--clr-neutral-grayish-blue);
+}
+
+.icon {
+    aspect-ratio: 1 / 1;
+    height: 57px;
+    margin-top: 33px;
+    position: absolute;
+    margin: 28px;
+    bottom: 0;
+    right: 0;
+}
+
+@media only screen and (min-width: 376px) {
+    .container {
+        min-width: 350px;
+        min-height: 250px;
+    }
+
+    .icon {
+        height: 64px;
+        margin: 2rem;
+    }
+
+    .title {
+        margin-bottom: 6px;
+    }
+}

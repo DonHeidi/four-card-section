@@ -4,21 +4,18 @@
 *, *:after, *:before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
   min-width: 100vw;
   background-color: var(--clr-neutra-light-gray);
 }
 
 main {
-  margin: auto;
-  min-width: 100%;
   display: grid;
   justify-content: center;
 }

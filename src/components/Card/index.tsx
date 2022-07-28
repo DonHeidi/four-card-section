@@ -14,8 +14,8 @@ const Card: FunctionComponent<CardProps> = ({ title, copy, icon }) => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>{title}</h2>
-      <p>{copy}</p>
-      <img src={icon.url} alt={icon.alt} />
+      <p className={styles.copy}>{copy}</p>
+      <img className={styles.icon} src={icon.url} alt={icon.alt} />
     </div>
   );
 };
