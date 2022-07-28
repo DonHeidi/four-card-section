@@ -26,6 +26,10 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 
+### Links
+
+- Live Site URL: [Site on Vercel](https://four-card-section-jet.vercel.app/)
+
 ### Screenshots
 
 **Desktop:**
@@ -39,19 +43,6 @@ Users should be able to:
 **Mobile:**
 
 ![](./screenshot_mobile.png)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -67,59 +58,61 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-I learned a lot about how grids are working and how to manipulate its children.
+- I learned a lot about how grids are working and how to manipulate its children.
 
-```css
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  height: auto;
-  row-gap: 25px;
-  place-items: center;
-}
-
-@media only screen and (min-width: 756px) {
+  ```css
   .container {
-    max-width: 760px;
-    gap: 30px;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media only screen and (min-width: 1279px) {
-  .container {
-    max-width: 1110px;
-    gap: 30px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    row-gap: 25px;
+    place-items: center;
   }
 
-  .container > :nth-child(1) {
-    grid-column: 1 / 2;
+  @media only screen and (min-width: 756px) {
+    .container {
+      max-width: 760px;
+      gap: 30px;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
-  .container > :nth-child(4) {
-    grid-column: 3 / 4;
+  @media only screen and (min-width: 1279px) {
+    .container {
+      max-width: 1110px;
+      gap: 30px;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .container > :nth-child(1) {
+      grid-column: 1 / 2;
+    }
+
+    .container > :nth-child(4) {
+      grid-column: 3 / 4;
+    }
+
+    .container > :nth-child(1),
+    .container > :nth-child(4) {
+      grid-row: 1 / 3;
+    }
   }
+  ```
 
-  .container > :nth-child(1),
-  .container > :nth-child(4) {
-    grid-row: 1 / 3;
-  }
-}
-```
+- React18 has no more default properties for components and you have to declare them. That was one more thing I learned.
 
-React18 has no more default properties for components and you have to declare them. That was one more thing I learned.
+  ```js
+  type GridProps = {
+    children: ReactNode,
+  };
 
-```js
-type GridProps = {
-  children: ReactNode,
-};
+  const Grid = ({ children }: GridProps) => {
+    return <div className={styles.container}>{children}</div>;
+  };
+  ```
 
-const Grid = ({ children }: GridProps) => {
-  return <div className={styles.container}>{children}</div>;
-};
-```
+- I learned how I can [deploy a React App with Github Pages](https://github.com/gitname/react-gh-pages)
 
 ## Author
 
