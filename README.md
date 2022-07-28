@@ -1,6 +1,130 @@
-# four-card-section
+# Frontend Mentor - Four card feature section solution
 
-This is an implementation of the Four Card Feature Section by Frontend Mentor
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+
+### Screenshots
+
+**Desktop:**
+
+![](./screenshot_desktop.png)
+
+**Tablet:**
+
+![](./screenshot_tablet.png)
+
+**Mobile:**
+
+![](./screenshot_mobile.png)
+
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
+
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS Grid
+- CSS Modules
+- Mobile-first workflow
+- TypeScript
+- [React](https://reactjs.org/) - JS library
+
+### What I learned
+
+I learned a lot about how grids are working and how to manipulate its children.
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: auto;
+  row-gap: 25px;
+  place-items: center;
+}
+
+@media only screen and (min-width: 756px) {
+  .container {
+    max-width: 760px;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1279px) {
+  .container {
+    max-width: 1110px;
+    gap: 30px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .container > :nth-child(1) {
+    grid-column: 1 / 2;
+  }
+
+  .container > :nth-child(4) {
+    grid-column: 3 / 4;
+  }
+
+  .container > :nth-child(1),
+  .container > :nth-child(4) {
+    grid-row: 1 / 3;
+  }
+}
+```
+
+React18 has no more default properties for components and you have to declare them. That was one more thing I learned.
+
+```js
+type GridProps = {
+  children: ReactNode,
+};
+
+const Grid = ({ children }: GridProps) => {
+  return <div className={styles.container}>{children}</div>;
+};
+```
+
+## Author
+
+- Website - [Sebastian Heitmann](https://www.sebastian-heitmann.dev) (**WIP**)
+- Frontend Mentor - [@don_heidi](https://www.frontendmentor.io/profile/DonHeidi)
 
 # Getting Started with Create React App
 
